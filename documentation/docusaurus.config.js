@@ -8,27 +8,22 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
  * The URL or reference to your projects logo!
  * @type {string}
  */
-const logo = 'https://upload.wikimedia.org/wikipedia/commons/1/17/Temple_T_logo.svg';
+const logo = 'img/logo.png';
 
 const main_template_jira_scripts = () => {
-  if (process.env.ORG_NAME === 'ApplebaumIan'){
-    return [    'https://temple-cis-projects-in-cs.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/azc3hx/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=50af7ec2',
-      'https://temple-cis-projects-in-cs.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/azc3hx/b/8/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=160e88a6',]
-  } else {
-    return []
-  }
+    return [
+        'https://temple-cis-projects-in-cs.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/1abpwv/b/8/b0105d975e9e59f24a3230a22972a71a/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-US&collectorId=86c4d908',
+        ]
 }
 
 // You can change the title here. The default is the name of the repository.
-const title = ''+process.env.PROJECT_NAME.replaceAll('-',' ').split(' ').map((word) => {
-  return word[0].toUpperCase() + word.substring(1);
-}).join(' ');
+const title = 'Tool Shed'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   /*TODO: Change to your project's title and tagline*/
   title: title,
-  tagline: 'Owls are cool',
+  tagline: 'A one stop shop to find tools available to rent near you',
   /*Unless you move this website to a seperate repo don't change url and baseurl.*/
   url: 'https://'+process.env.ORG_NAME+'.github.io/',
   baseUrl: '/'+process.env.PROJECT_NAME+'/',
@@ -125,6 +120,12 @@ const config = {
             activeBaseRegex: `/tutorial/`,
           },
           {
+            to: '/resources/Links',
+            label: 'Links & Resources',
+            position: 'left',
+            activeBaseRegex: `/resources/`,
+          },
+          {
             href: 'https://github.com/'+process.env.ORG_NAME+'/'+process.env.PROJECT_NAME,
             label: 'GitHub',
             position: 'right',
@@ -144,8 +145,13 @@ const config = {
                 label: 'Documentation',
                 to: '/docs/intro',
               },
+              {
+                label: 'Links & Resources',
+                to: '/resources/Links',
+              },
             ],
           },
+          
           // {
           //   title: 'Community',
           //   items: [
@@ -205,6 +211,17 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
         // ... other options
       },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'resources',
+        path: 'resources',
+        routeBasePath: 'resources',
+        sidebarPath: require.resolve('./sidebars.js'),
+        // ... other options
+      },
+
     ],
     [
       "docusaurus2-dotenv-2",

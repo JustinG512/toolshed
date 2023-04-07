@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div id="root"></div>
+
+<script type="application/javascript">
+	window._tools = {{ tools|json }};
+</script>
+
+<script src="/webpack/ToolList.js" type="application/javascript"></script>
+
+{% endblock %}

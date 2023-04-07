@@ -5,21 +5,25 @@ sidebar_position: 5
 # Use-case descriptions
 ## Use Case #1  
 
-The user wants to search their local neighborhood for a hedge trimmer. They would like to get the job done today and do not have the budget to purchase a brand-new one. 
+A user wants to search their local neighborhood for a hedge trimmer. They use tool shed to find the tool so that they get the job done today and do not go over their budget to purchase a brand-new one. 
 
-1. The user navigates to (URL:TBD) and enters their username and password. 
+1. The user navigates to sharemytoolshed.com/
 
-2. The user clicks the (LOGIN) button. 
+2. The user clicks the (LOGIN) button in the nav bar
 
-3. The user clicks on the (button: RENT_TOOL) and completes the following fields. 
+3. The user enters their email and password. 
 
-    - Zip Code: ##### 
+4. The user clicks the (LOGIN) button. They're redirected back to sharemytooshed.com/.
 
-    - Search Radius: 15 miles 
+5. The user adjusts the search parameters in the search form to: 
 
-4. The user clicks the (button: SEARCH_TOOL) which will complete the request and execute the database query. 
+    - Search Radius: 15 kilometers
 
-5. The user is presented with 3 search results 
+    - Maker: Rigid
+
+6. The user clicks the (button: SEARCH_TOOL) which will complete the request and execute the database query. 
+
+7. The user is presented with 3 search results 
 
     - AVAILABLE: <i>Gas Hedge Trimmer (NAME) (CONTACT)</i> 
 
@@ -27,31 +31,23 @@ The user wants to search their local neighborhood for a hedge trimmer. They woul
 
     - AVAILABLE: <i>Electric (Wireless) Hedge Trimmer (NAME) (CONTACT)</i> 
 
-6. The user clicks option 3 and clicks the (button: CONTACT) and is presented with the contact information for Electric (Wireless) Hedge Trimmer. 
+8. The user clicks option 3, which is within their budget so they can afford the tool, and clicks the (button: CONTACT) and is presented with the contact information for Electric (Wireless) Hedge Trimmer. 
 
-7. The user contacts the person responsible for Electric (Wireless) Hedge Trimmer. 
+9. The user contacts the person responsible for Electric (Wireless) Hedge Trimmer. 
 
-8. The user clicks the (button: LOG_OFF) and closes the website. 
+10. The user clicks the (button: LOG_OFF) and closes the website. 
 
  
 
 ## Use Case #2  
 
-A homeowner wants to list a tool to sell it as they no longer need it anymore and for other users to be able to purchase it. 
+A user wants to list a tool to sell it as they no longer need it anymore so that other users to be able to purchase it. 
 
-1. The user enters the URL. 
+1. The user navigates to sharemytoolshed.com/, and logs in like in use case #1. The user ends up on the home page, logged in. 
 
-2. The user enters their username and password. 
-
-3. The user clicks on the (button: LOGIN). 
-
-4. The user is brought to the homepage. 
-
-5. The user clicks on the (button: LIST_TOOL) and completes the following fields. 
+2. The user clicks on the (button: LIST_TOOL) and completes the following fields. 
 
     - Name of tool 
-
-    - Zip Code: ##### 
 
     - Type of tool (Electric, Battery, Wireless, etc.) 
 
@@ -75,15 +71,13 @@ A homeowner wants to list a tool to sell it as they no longer need it anymore an
 
 ## Use Case #3  
 
-The user would like to rent out tools that they are not currently using to earn some extra money. 
+A user would like to rent out tools that they are not currently using to earn some extra money. 
 
-1. The user navigates to (URL:TBD) and enters their username and password followed by clicking the (button: LOGIN). 
+1. The user logs in like in use case #2 & #3. 
 
 2. The user clicks on the (button: LIST_TOOL) and completes the following fields. 
 
     - Name of Tool 
-
-    - Zip Code: ##### 
 
     - Type of Tool (Electric, Battery, Wireless, etc.) 
 
@@ -107,7 +101,7 @@ The user would like to rent out tools that they are not currently using to earn 
 
 ## Use Case #4  
 
-A homeowner has an unexpected afternoon off from work and wants to see what tools are available now to see what projects they can complete around the house. 
+A user has an unexpected afternoon off from work and wants to see what tools are available now to see what projects they can complete around the house. 
 
 1. The homeowner visits the base URL of the website (apex hostname and root path) 
 
@@ -127,7 +121,7 @@ A homeowner has an unexpected afternoon off from work and wants to see what tool
 
 ## Use Case #5  
 
-As a homeowner, I want to be notified when a nearby Air Blower will be available to be rented.  
+A user wants to be notified when a nearby Air Blower will be available to be rented so that they can quickly recieve more information of the product being rented.
 
 1. The user navigates to (URL:TBD) and enters their username and password followed by clicking the (button: LOGIN).  
 
@@ -161,7 +155,11 @@ As a homeowner, I want to be notified when a nearby Air Blower will be available
 
     - You will be notified when this item is listed. 
 
-9. The homeowner can close the website or click (button: LOG_OFF). 
+9. The user is notified of desired item and receives a prompt containing the address and additional comments. 
+
+    - You will be notified when this item is currently available and the details to schedule a meet-up with the owner. 
+
+10. The homeowner can close the website or click (button: LOG_OFF). 
 
  
 

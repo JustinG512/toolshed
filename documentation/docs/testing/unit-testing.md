@@ -2,8 +2,7 @@
 sidebar_position: 1
 ---
 # Unit tests
-For each method, one or more test cases.
 
-A test case consists of input parameter values and expected results.
+Unit testing is done via Jest. To create a new set of tests for a file called example.js, you'd write a file called `example.test.js`, which would `const {exportA, exportB, ...} = require("example.js");` and test what it exports.
 
-All external classes should be stubbed using mock objects.
+

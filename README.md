@@ -6,9 +6,14 @@
 [![Deploy Docs](https://github.com/Capstone-Projects-2023-Spring/project-tool-shed/actions/workflows/deploy.yml/badge.svg)](https://github.com/Capstone-Projects-2023-Spring/project-tool-shed/actions/workflows/deploy.yml)
 [![Documentation Website Link](https://img.shields.io/badge/-Documentation%20Website-brightgreen)](https://capstone-projects-2023-spring.github.io/project-tool-shed/)
 
+
+
 </div>
 
-## Running
+## Running Production Website
+Simply visit this link:<a href="http://sharemytoolshed.com:5000/"> Toolshed Website</a>. Happy tool hunting!
+
+## Running Locally
 
 	npm install
 	npm run local
@@ -16,13 +21,23 @@
 ## Code Tree
 
     ./
-    |   index.js # core webserver code
+    |   index.js # project entry point
+    |   boilerplate.js # Core webserver stuff
     |   models.js # where Sequelize models are defined
     |   routes.js # where routes are defined.
+    |   webpack.config.js # webpack config file
+    |   webpack/ # frontend code that gets bundled via webpack
+    |   public/ # gets served raw under <scheme>://<hostname>:<port>/public/
     |   scripts/ # devops scripts
+    |   data/ # data you can use, not explicity used by app
+    |   validators/ # code for validating input
     +-- templates/
     |   |  base.html # base template file
     |   |  ... more .html files that extend base.html
+
+## Generating documentation
+
+To generate up-to-date documentation, run `npm run docs`. This will create the necessary .md file for the documentation site.
 
 ## Keywords
 
@@ -46,7 +61,9 @@ With many employees working from home and setting up home offices, Do It Yoursel
 
 ## Required Resources
 
-This is a purely JavaScript web application project. To run locally, all you need is to install Docker and NodeJS. To run elsewhere, replace the dockerized postgres with a real postgres server & reconfigure index.js. This project also uses the Google Maps API (which comes with free $200 credit, beyond which it's out of pocket). 
+This is a purely JavaScript web application project. To run locally (or ill-advisedly in production ;p), all you need is to install Docker and NodeJS >=v19. If you're running the server in production, you only need NodeJS should stop using the dockerized postgres and use a real postgres. You can configure how the server connects to the database via [PostgreSQL env vars](https://www.postgresql.org/docs/current/libpq-envars.html). This project also uses the Google Maps API to display search results on a map (which comes with free $200 credit, beyond which it's out of pocket). 
+
+To run this project, you'll also need to run [this geocoder](https://github.com/natesymer/gubmint).
 
 ## Collaborators
 
